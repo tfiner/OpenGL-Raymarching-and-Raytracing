@@ -11,21 +11,24 @@
 #include <string>
 #include <fstream>
 
+float inline constexpr vertices[12] = {
+    1.0f,  1.0f, 0.0f,  // top right
+    1.0f, -1.0f, 0.0f,  // bottom right
+    -1.0f, -1.0f, 0.0f,  // bottom left
+    -1.0f,  1.0f, 0.0f   // top left
+};
+
+unsigned int inline constexpr indices[6] = {
+    0, 1, 3,  // first Triangle
+    1, 2, 3   // second Triangle
+};
+
 class Screen {
 private:
-    float vertices[12];
-    unsigned int indices[6];
     unsigned int VBO, VAO, EBO;
 public:
-    Screen() : vertices {
-        1.0f,  1.0f, 0.0f,  // top right
-        1.0f, -1.0f, 0.0f,  // bottom right
-        -1.0f, -1.0f, 0.0f,  // bottom left
-        -1.0f,  1.0f, 0.0f   // top left
-    }, indices {  // note that we start from 0!
-        0, 1, 3,  // first Triangle
-        1, 2, 3   // second Triangle
-    } {
+    Screen() 
+    {
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
         glGenBuffers(1, &EBO);

@@ -32,7 +32,7 @@
 // include OpenGL libraries
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "glm.hpp"
+#include <glm/glm.hpp>
 
 #include "shader.h"
 #include "screen.h"

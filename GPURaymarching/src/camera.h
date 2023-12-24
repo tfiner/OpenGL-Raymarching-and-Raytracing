@@ -8,7 +8,7 @@
 #ifndef camera_h
 #define camera_h
 
-#include "glm.hpp"
+#include <glm/glm.hpp>
 #include "shader.h"
 
 const float CAMERA_SPEED_SLOW = 1.0f;
