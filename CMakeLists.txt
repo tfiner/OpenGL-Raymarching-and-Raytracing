@@ -7,3 +7,5 @@ project(
 
 
 add_subdirectory(GPURayMarching)
+
+file(COPY ${CMAKE_SOURCE_DIR}/GPURaymarching/shaders DESTINATION ${CMAKE_BINARY_DIR}/GPURaymarching)

@@ -36,11 +36,11 @@ float mandelbulb(in vec3);
 //!!!!!!! THE ONLY FUNCTION THAT SHOULD BE CHANGED !!!!!!!
 float scene_distance(in vec3 p) {
     return min(sphere_distance(p, vec3(0, 2 + sin(time*1.32), 1), 0.5), min(sphere_distance(p, vec3(0, 0, 2 + sin(time*1.32)), 0.5), sphere_distance(p, vec3(0, 0, 0), 0.5)));
-    //return simple_repeat_distance(p, vec3(0), 0.5, 5);
-    //p.xy = mod((p.xy),1.0)-vec2(0.5); // instance on xy-plane
+    // return simple_repeat_distance(p, vec3(0), 0.5, 5);
+    // p.xy = mod((p.xy),1.0)-vec2(0.5); // instance on xy-plane
     //return length(p)-0.3;
-    //return mandelbulb(p);
-    //return sierpinski_distance(p, 8);
+    // return mandelbulb(p);
+    // return sierpinski_distance(p, 8);
 }
 
 //####### RAY OPERATIONS #######

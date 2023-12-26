@@ -8,7 +8,7 @@
 //  OpenGL 4.1 is used to handle the graphics. Window is created with GLFW and GLAD libraries; GLM library is used in the vector calculations as it is compatible with OpenGL. Look at the constants in "shaders/screen_raymarching.fs" to change drawing parameters and the constants in "src/camera.h" to change camera parameters. To change the displayed scene modify the code in the "scene_distance" function in "shaders/screen_raymarching.fs". The code in the other files should not be modified. If run on a computer without a retina display delete the RETINA macro below:
 #define RETINA
 //  To change the graphics from Ray Marching to Ray Tracing change the belowe macro from "false" to "true"
-#define SWITCH_GRAPHICS true
+#define SWITCH_GRAPHICS false
 //  In both cases, only one ray is generated per pixel to improve performance (this is why shadows in Ray Tracing case look so noisy)
 //
 //  TODO: add GUI to make changing the constants easier
